@@ -1,0 +1,28 @@
+#espacioherencia{
+    margin-bottom: 60px;
+}
+h2{
+	text-align: center;
+}
+#contenedor_contacto_1{
+
+margin: 0px 105px;
+height: 490px;
+}
+#contenedor_contacto_2{
+  margin: 5px 620px;
+    height: 300px;
+    width: 500px;}
+#contenedor_contacto_3{
+  margin: -305px -15px;
+}
+
+ul{
+  list-style:none;
+}
+#separacionnormatividad{
+    
+    margin-bottom: 200px;
+}
+#contenedorPdf{
+  margin :-120px 0px; }

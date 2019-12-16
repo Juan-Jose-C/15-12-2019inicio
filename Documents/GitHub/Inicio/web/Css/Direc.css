@@ -1,0 +1,15 @@
+.nav-link {
+background:#9D2449;  
+margin-bottom: 10px;
+margin-right: 10px;
+
+text-decoration: none;
+}
+#pills-academica-tab,#pills-juridica-tab 
+,#pills-coordinacion-tab,#pills-Planeación-tab,
+#pills-vinculación-tab,#pills-AdministraciónFinanzas-tab,
+#pills-Informática-tab,#pills-Institucional-tab
+{color: #ffffff;}
+#espacioherencia{
+    margin-bottom: 70px;
+}

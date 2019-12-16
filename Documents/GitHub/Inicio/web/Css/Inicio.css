@@ -1,0 +1,97 @@
+#eventoclic{
+  cursor:pointer;
+    
+}
+#slider{
+   margin-bottom: 70px; 
+}
+
+#convocatorias{
+ 
+    margin-bottom: 5px;
+    
+}
+
+.overlay {
+	background: rgba(0,0,0,.7);
+	position: fixed;
+        z-index: 400;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	visibility: hidden;
+}
+
+.overlay.active {
+	visibility: visible;
+}
+
+.popup {
+	background: #F8F8F8;
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7);
+	border-radius: 3px;
+	margin-bottom:-120px; 
+	padding: 10px;
+	text-align: center;
+	width: 900px;
+	
+	transition: .3s ease all;
+	transform: scale(0.7);
+	opacity: 0;
+}
+
+.popup .btn-cerrar-popup {
+	font-size: 30px;
+       font-family: 'Arial', sans-serif;
+	line-height: 35px;
+	display: block;
+	text-align: right;
+	
+	color: red;
+}
+
+.popup .btn-cerrar-popup:hover {
+	color: #000;
+}
+
+.popup.active {	transform: scale(1); opacity: 10; }
+
+.popup.active .contenedor-inputs { animation: entradaInputs 1s linear 1s forwards; }
+
+@keyframes entradaInputs {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+
+
+
+.card-container {
+	max-width: 1200px;
+	margin: 50px auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+        
+}
+.card {
+	height: auto ;
+	width: 360px;
+	margin: 10px;
+}
+#imgproceso{
+    background: #B38E5D;
+
+ 
+}
+#imgproceso2{
+    margin-bottom: 5px; 
+    margin-top: 7px;
+   width:100%; 
+   height:240px;
+ 
+}
