@@ -5,10 +5,11 @@ import java.util.ArrayList;
 
 public class Controlador {
 
+//-------------------------------Pagina de Inicio------------------------------------------------------------------
+//--------------------------------pagina de Directorio de la coordinacion------------------------------------------
     static int inc = 0;
     static ArrayList<Integer> IdArea = new ArrayList<>();
 
-    //////////--------------------pagina de Directorio de la coordinacion----------------------
     public static String getVistaCatalogoArea() throws SQLException {
         Modelo_ConsultaDirectorioCoordinacion modeloD = new Modelo_ConsultaDirectorioCoordinacion();
         String htmlcode = "";
@@ -28,9 +29,11 @@ public class Controlador {
         Modelo_ConsultaDirectorioCoordinacion modeloD = new Modelo_ConsultaDirectorioCoordinacion();
         for (int i = 1; i <= inc; i++) {
             // System.out.println("aaa "+inc+" ++ "+i + "  "+IdArea.get(i-1));
-           if(i==1){htmlcode2 += "<div class=\"tab-pane active\" id=\"pills-coordinacion" + i + "\" role=\"tabpanel\" aria-labelledby=\"pills-coordinacion-tab\">";}
-           else{
-            htmlcode2 += "<div class=\"tab-pane fade\" id=\"pills-coordinacion" + i + "\" role=\"tabpanel\" aria-labelledby=\"pills-coordinacion-tab\">";}
+            if (i == 1) {
+                htmlcode2 += "<div class=\"tab-pane active\" id=\"pills-coordinacion" + i + "\" role=\"tabpanel\" aria-labelledby=\"pills-coordinacion-tab\">";
+            } else {
+                htmlcode2 += "<div class=\"tab-pane fade\" id=\"pills-coordinacion" + i + "\" role=\"tabpanel\" aria-labelledby=\"pills-coordinacion-tab\">";
+            }
             for (Modelo_ConsultaDirectorioCoordinacion D : modeloD.getSelectConsultaDirectorio(IdArea.get(i - 1))) {
                 htmlcode2
                         += "       <p>Nombre :" + D.getNombre() + " </p>\n"
@@ -45,32 +48,29 @@ public class Controlador {
         return htmlcode2;
     }
 //--------------------------- Pagina de Oferta Educativa-----------------------------------------------------
-    public static String getVistaCatalogoPrograma() throws SQLException{
-    String html="";
-    String color[]=new String[5];
-    color[0]="red"; color[1]="blue"; color[2]="purple"; color[3]="yellow"; color[4]="green";
-   int incr=0;
-    Modelo_ConsultaOfertaEducativa modeloEdu=new Modelo_ConsultaOfertaEducativa();
-        for (Modelo_ConsultaOfertaEducativa edu: modeloEdu.getSelectConsultaCatalogoPrograma()) {
-           if(incr==5){incr=0;}
-            html+="<div class=\"btn-item\">\n" +
-"    <a href=\"#\" class=\"btn-ghost "+color[incr]+" secundary round\" >"+edu.getNombreCarrera()+"</a>\n" +
-"  </div>";
-            incr++;
-            
+
+    public static String getVistaCatalogoPrograma() throws SQLException {
+        String html = "";
+
+        Modelo_ConsultaOfertaEducativa modeloEdu = new Modelo_ConsultaOfertaEducativa();
+        for (Modelo_ConsultaOfertaEducativa edu : modeloEdu.getSelectConsultaCatalogoPrograma()) {
+
+            html += 
+                     "<button class=\"btn-ghost red secundary round\" >" + edu.getNombreCarrera() + "</button>  \n"
+                    ;
+
         }
-    
-    
-    return html;
+
+        return html;
     }
-    
-    public static String getVistaOfertaEducativa() throws SQLException{
-    String html="";
-    Modelo_ConsultaOfertaEducativa modeloOfe=new Modelo_ConsultaOfertaEducativa();
-        for (Modelo_ConsultaOfertaEducativa edu: modeloOfe.getSelectConsultaOfertaEducativa(1)) {
-            html+="<p>"+edu.getCarrera()+"</p>";
+
+    public static String getVistaOfertaEducativa() throws SQLException {
+        String html = "";
+        Modelo_ConsultaOfertaEducativa modeloOfe = new Modelo_ConsultaOfertaEducativa();
+        for (Modelo_ConsultaOfertaEducativa edu : modeloOfe.getSelectConsultaOfertaEducativa(1)) {
+            html += "<p>" + edu.getCarrera() + "</p>";
         }
-    
-    
-    return html;}
+
+        return html;
+    }
 }

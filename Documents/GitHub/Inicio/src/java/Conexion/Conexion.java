@@ -9,35 +9,28 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-
-
 /**
  *
  * @author JUAN
  */
 public class Conexion {
-   // Statement Sentencias;
-    
-   public Connection conexion;
-    
+    // Statement Sentencias;
 
-   
+    public Connection conexion;
+
     public Connection Conexion1() throws SQLException {
         try {
-         // Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-          //String url = "jdbc:sqlserver://DESKTOP-NEM3CPC:1433;databaseName=Inicio;user=usuario;password=123;";
-           //  conexion = DriverManager.getConnection(url);
-         Class.forName("com.mysql.jdbc.Driver");
-conexion=DriverManager.getConnection("jdbc:mysql://localhost:3306/Inicio","root","12728497JUAN");
-      
+            // Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+            //String url = "jdbc:sqlserver://DESKTOP-NEM3CPC:1433;databaseName=Inicio;user=usuario;password=123;";
+            //  conexion = DriverManager.getConnection(url);
+            Class.forName("com.mysql.jdbc.Driver");
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/Inicio", "root", "12728497JUAN");
+
         } catch (Exception ex) {
-          
-       return null;
+
+            return null;
         }
         return conexion;
     }
 
 }
-
-
-

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Servelets;
+package Servelet;
 
 import Codigo_Java.Modelo_ConsultaOfertaEducativa;
 import java.io.IOException;
@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author JUAN
  */
-public class OfertaEducativa extends HttpServlet {
+public class Controlador_OfertaEducativa extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -31,7 +31,7 @@ public class OfertaEducativa extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+  protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
@@ -47,9 +47,14 @@ public class OfertaEducativa extends HttpServlet {
          
           String Json="{\"carrera\":{\"ca\":\""+html+"\"}}";
           out.print(Json);
+
+            
+            
+            
+
         } catch (SQLException ex) {
-            Logger.getLogger(OfertaEducativa.class.getName()).log(Level.SEVERE, null, ex);
-        }
+          Logger.getLogger(Controlador_OfertaEducativa.class.getName()).log(Level.SEVERE, null, ex);
+      }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

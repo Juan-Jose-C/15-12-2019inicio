@@ -33,7 +33,7 @@ document.write('<li><a href="Inicio.jsp"><img src="Barramenu/house1.png"></a></l
 document.write('<li class="dropdown">');
 document.write('<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img src="Barramenu/dd.png"><span class="caret"></span></a>');
 document.write('<ul class="dropdown-menu" role="menu">');
-document.write('<li><a href="Directorio de la Coordinacion Nacional.html">Coordinación de ODES de CECyTE</a></li>');
+document.write('<li><a href="Directorio de la Coordinacion.jsp">Coordinación de ODES de CECyTE</a></li>');
 document.write('<li><a href="colegios en los estados.html">Colegios en los Estados</a></li>');
 document.write('</ul>');
 document.write('</li>');
