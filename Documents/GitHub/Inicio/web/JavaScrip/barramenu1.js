@@ -52,7 +52,7 @@ document.write('<ul class="dropdown-menu" role="menu">');
 document.write('<li><a href="#">Académica </a>');
 document.write('<ul id="colordorp">');
 document.write('<li><a href="Normativilidad.html">Acuerdos Secretariales</a></li>');
-document.write('<li><a href="#">Oferta Educativa</a></li>');
+document.write('<li><a href="Oferta Educativa.jsp">Oferta Educativa</a></li>');
 document.write('<li><a href="#">CECyTEs</a></li>');
 document.write('<li><a href="#">EMSaD</a></li>');
 document.write('</ul>');

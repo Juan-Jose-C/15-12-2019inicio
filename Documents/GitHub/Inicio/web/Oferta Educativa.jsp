@@ -31,78 +31,25 @@
             <center><h2>Oferta Educativa</h2></center>
         </div>
         <div class="container">
-           <form action="Controlador_OfertaEducativa2" method="post">
-            <section class="bg-dark btn-container" >
-                
+
+
+
+
+            <form action="Controlador_OfertaEducativa2" method="post">
+
                 <div class="btn-item coo" id="clic">
-
                     <%=Controlador.getVistaCatalogoPrograma()%>         
-                </div>
 
-            </section>
-            
-                <button class="btn-ghost red round"> servelet </button>
+                </div>
             </form>
 
-                
-            
-                
-                
-               
-                
-                
-            <button class="btn-ghost red round" id="1234"> Consulta </button> 
 
-            <section id="145">
 
-            </section>
+            <!--<button class="btn-ghost red round"> servelet </button>--> 
 
-            <!-- 
-              <input class="btn-ghost red round" type="submit" value="sas">
-            
-            <section class="bg-dark btn-container">
-      <div class="btn-item">
-         <a href="#" class="btn-ghost red round" >primario</a>
-         <a href="#" class="btn-ghost red secundary round" >secundario</a>
-       
-         <a href="#" class="btn-ghost blue round" >primario</a>
-         <a href="#" class="btn-ghost pink secundary round" >secundario</a>
-       </div>
-       
-        <div class="btn-item">
-         <a href="#" class="btn-ghost red round" >primario</a>
-         <a href="#" class="btn-ghost red secundary round" >primario</a>
-       </div>
-       
-       <div class="btn-item">
-         <a href="#" class="btn-ghost blue round" >primario</a>
-         <a href="#" class="btn-ghost blue secundary round" >secundario</a>
-       </div>
-       
-       <div class="btn-item">
-         <a href="#" class="btn-ghost purple round" >primario</a>
-         <a href="#" class="btn-ghost purple secundary round" >secundario</a>
-       </div>
-       
-       <div class="btn-item">
-         <a href="#" class="btn-ghost yellow round" >primario</a>
-         <a href="#" class="btn-ghost yellow secundary round" >secundario</a>
-       </div>
-       
-       <div class="btn-item">
-         <a href="#" class="btn-ghost green round" >primario</a>
-         <a href="#" class="btn-ghost green secundary round" >secundario</a>
-       </div>
-     
-       
-     
-       
-     </section>
-            -->
+
+
         </div>  
-
-
-
 
         <script src="JavaScrip/Oferta Educativa.js" type="text/javascript"></script>
 

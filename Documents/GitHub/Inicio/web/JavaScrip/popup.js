@@ -22,7 +22,10 @@ function cerrar( ){
 	popup.classList.remove('active');
        
 }
-
+function aa(){
+    
+alert("ass");    
+};
 
 
 

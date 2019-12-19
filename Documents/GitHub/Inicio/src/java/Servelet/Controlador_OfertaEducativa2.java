@@ -15,6 +15,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import Codigo_Java.Controlador;
 
 /**
  *
@@ -36,27 +37,45 @@ public class Controlador_OfertaEducativa2 extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            
+
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Controlador_OfertaEducativa2</title>"); 
-   out.println("<link rel=\"stylesheet\" href=\"https://framework-gb.cdn.gob.mx/qa/assets/styles/main.css\">");
-           out.println("<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\"></script>");
+            out.println("<title>Oferta Educativa</title>");
+            out.println("<link rel=\"stylesheet\" href=\"https://framework-gb.cdn.gob.mx/qa/assets/styles/main.css\">");
+            out.println("<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\"></script>");
+            out.println("<link href=\"Css/Oferta Educativa.css\" rel=\"stylesheet\" type=\"text/css\"/>");
+            out.println("<link href=\"Css/Inicio.css\" rel=\"stylesheet\" type=\"text/css\"/>");
             out.println("</head>");
             out.println("<body>");
-            out.println("<br><br>");
-                    String html="";
-         Modelo_ConsultaOfertaEducativa modeloOfe=new Modelo_ConsultaOfertaEducativa();
-        for (Modelo_ConsultaOfertaEducativa edu: modeloOfe.getSelectConsultaOfertaEducativa(1)) {
-            html+="<p>"+edu.getCarrera()+"</p>";
-        
-        }
-        out.println(html);
+            out.println("<div id=\"espacioherencia\">\n"
+                    + "            <script language=\"javascript\" type=\"text/javascript\" src=\"JavaScrip/barramenu1.js\"></script>\n"
+                    + "        </div>");
+            out.println("<div class=\"container\">");
+            String noms = request.getParameter("nombre");
+            int tipo = Integer.parseInt(noms);
+
+            out.println("<div class=\"btn-item coo\" >");
+            out.println(Controlador.getVistaOfertaEducativa(tipo));
+            out.println("</div>");
+
+            out.println("<br><br><br><br>");
+            out.println(" <a href=\"Oferta Educativa.jsp\" class=\"btn-ghost red round\">Regresar</a>");
+            out.println("</div>");
+
+            out.println("<div class=\"overlay\" id=\"overlay\">\n"
+                    + "                    <div class=\"popup\" id=\"popup\">\n"
+                    + "                        <a  class=\"btn-cerrar-popup\" onclick=\"cerrar();\"><i class=\"fas fa-times\" id=\"eventoclic\"> X </i></a>\n"
+                    + "                        <form action=\"\">\n"
+                    + "                            <embed  height=\"450\" width=\"100%\" name=\"embed_content\" id=\"pdf12\" src=\"\" type=\"application/pdf\"/>\n"
+                    + "                        </form>\n"
+                    + "                    </div>\n"
+                    + "                </div>");
+
+            out.println("<br><br><br><br>");
             
-            
-            out.println(" <a href=\"Oferta Educativa.jsp\" >Regresar</a>");
             out.println("<script src=\"https://framework-gb.cdn.gob.mx/qa/gobmx.js\"></script>");
+            out.println(" <script src=\"JavaScrip/popup.js\" type=\"text/javascript\"></script>");
             out.println("</body>");
             out.println("</html>");
         } catch (SQLException ex) {

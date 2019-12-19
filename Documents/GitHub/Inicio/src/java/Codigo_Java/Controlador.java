@@ -51,24 +51,18 @@ public class Controlador {
 
     public static String getVistaCatalogoPrograma() throws SQLException {
         String html = "";
-
         Modelo_ConsultaOfertaEducativa modeloEdu = new Modelo_ConsultaOfertaEducativa();
         for (Modelo_ConsultaOfertaEducativa edu : modeloEdu.getSelectConsultaCatalogoPrograma()) {
-
-            html += 
-                     "<button class=\"btn-ghost red secundary round\" >" + edu.getNombreCarrera() + "</button>  \n"
-                    ;
-
+            html +="<button name=\"nombre\" class=\"btn-ghost red secundary round\" value=\""+edu.getId_carrera()+"\">" + edu.getNombreCarrera() + "</button>  \n";
         }
-
         return html;
     }
 
-    public static String getVistaOfertaEducativa() throws SQLException {
+    public static String getVistaOfertaEducativa(int Oferta) throws SQLException {
         String html = "";
         Modelo_ConsultaOfertaEducativa modeloOfe = new Modelo_ConsultaOfertaEducativa();
-        for (Modelo_ConsultaOfertaEducativa edu : modeloOfe.getSelectConsultaOfertaEducativa(1)) {
-            html += "<p>" + edu.getCarrera() + "</p>";
+        for (Modelo_ConsultaOfertaEducativa edu : modeloOfe.getSelectConsultaOfertaEducativa(Oferta)) {
+            html += "<button onclick=\"abrir(this.value)\" value=\"Carreras/carrera/"+edu.getPdf_informacion()+".pdf\" class=\"btn-ghost red secundary round\">"+edu.getCarrera()+"</button>  \n";
         }
 
         return html;

@@ -14,6 +14,8 @@ public class Modelo_ConsultaOfertaEducativa {
      private int id_carrera;
      private String NombreCarrera;  
      private String Carrera;
+     private String Pdf_informacion;
+     private String Pdf_programa;
      
     public Modelo_ConsultaOfertaEducativa(){}
     
@@ -41,19 +43,26 @@ public class Modelo_ConsultaOfertaEducativa {
         }
         return getPrograma;
     }
-   public Modelo_ConsultaOfertaEducativa(String Carrera){
+   public Modelo_ConsultaOfertaEducativa(String Carrera,String Pdf_informacion,String Pdf_programa){
    this.Carrera=Carrera;
+   this.Pdf_informacion=Pdf_informacion;
+   this.Pdf_programa=Pdf_programa;
    }
    
    public String getCarrera() {
         return Carrera;
     }
-   
+   public String getPdf_informacion() {
+        return Pdf_informacion;
+    }
+    public String getPdf_programa() {
+        return Pdf_programa;
+    }
    public ArrayList<Modelo_ConsultaOfertaEducativa> getSelectConsultaOfertaEducativa(int programa) throws SQLException {
         ArrayList<Modelo_ConsultaOfertaEducativa> getOferta = new ArrayList<>();
         try {
             rs = m.sp_SelectConsultaOfertaEducativa(programa).executeQuery();
-            while (rs.next()) {getOferta.add(new Modelo_ConsultaOfertaEducativa(rs.getString(1)));}
+            while (rs.next()) {getOferta.add(new Modelo_ConsultaOfertaEducativa(rs.getString(1),rs.getString(2),rs.getString(3)));}
         } catch (SQLException e) {
         } finally {
             m.cerrarconexion();
@@ -62,15 +71,17 @@ public class Modelo_ConsultaOfertaEducativa {
     }
    
    
-  /* public static void main(String[] args) throws SQLException {
+   public static void main(String[] args) throws SQLException {
         Modelo_ConsultaOfertaEducativa Mo=new Modelo_ConsultaOfertaEducativa();
         int n=0;
         for (Modelo_ConsultaOfertaEducativa Con:Mo.getSelectConsultaOfertaEducativa(1)) {
          n++;
-            System.out.println(n+" "+Con.getCarrera());
+            System.out.println(n+" "+Con.getCarrera()+" "+Con.getPdf_informacion());
         }
    
-    }*/
+    }
+
+    
 
     
     
