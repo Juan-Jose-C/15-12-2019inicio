@@ -44,7 +44,7 @@ public class Modelo_ConsultaInicio {
     }
 
 
-    public static void main(String[] args) throws SQLException {
+    /*public static void main(String[] args) throws SQLException {
         Modelo_ConsultaInicio Mo = new Modelo_ConsultaInicio();
         int n = 0;
         for (Modelo_ConsultaInicio Con : Mo.getSelectConsultaAvis0sConcocatorias(2)) {
@@ -52,5 +52,5 @@ public class Modelo_ConsultaInicio {
             System.out.println(n + " " + Con.getRuta_Imagen());
         }
 
-    }
+    }*/
 }

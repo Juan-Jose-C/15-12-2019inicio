@@ -71,7 +71,7 @@ public class Modelo_ConsultaOfertaEducativa {
     }
    
    
-   public static void main(String[] args) throws SQLException {
+   /*public static void main(String[] args) throws SQLException {
         Modelo_ConsultaOfertaEducativa Mo=new Modelo_ConsultaOfertaEducativa();
         int n=0;
         for (Modelo_ConsultaOfertaEducativa Con:Mo.getSelectConsultaOfertaEducativa(1)) {
@@ -79,7 +79,7 @@ public class Modelo_ConsultaOfertaEducativa {
             System.out.println(n+" "+Con.getCarrera()+" "+Con.getPdf_informacion());
         }
    
-    }
+    }*/
 
     
 
