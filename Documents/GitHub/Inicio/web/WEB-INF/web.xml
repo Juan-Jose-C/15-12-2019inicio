@@ -6,7 +6,7 @@
     </servlet>
     <servlet>
         <servlet-name>Controlador_OfertaEducativa2</servlet-name>
-        <servlet-class>Servelet.Controlador_OfertaEducativa2</servlet-class>
+        <servlet-class>Servelet.OfertaEducativa</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Controlador_OfertaEducativa</servlet-name>
@@ -14,7 +14,7 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Controlador_OfertaEducativa2</servlet-name>
-        <url-pattern>/Controlador_OfertaEducativa2</url-pattern>
+        <url-pattern>/OfertaEducativa</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

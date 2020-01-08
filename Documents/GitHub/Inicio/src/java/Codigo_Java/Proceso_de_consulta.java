@@ -20,7 +20,7 @@ public class Proceso_de_consulta {
     public static void InsertandoDatos(int tipo) throws SQLException {
         rs = m.sp_SelectConsultaAvis0sConcocatorias(tipo).executeQuery();
         while (rs.next()) {
-            vector.add(new Consultas(rs.getString(4), rs.getString(5)));   
+          //  vector.add(new Consultas(rs.getString(4), rs.getString(5)));   
         }
        m.cerrarconexion();
     }
@@ -36,10 +36,10 @@ public class Proceso_de_consulta {
     }
     
     public static String ImagenPrincipal(int posicion) throws SQLException {
-        return "Imagenes/" + vector.get(posicion).getRuta_Imagen();
+        return "Imagenes/";// + vector.get(posicion).getRuta_Imagen();
         //return ""+vector.size();
     }
     public static String ru(int posicion) throws SQLException {
-        return "Url/" + vector.get(posicion).getRuta_Url();
+        return "Url/" ;//+ vector.get(posicion).getRuta_Url();
     }
 }

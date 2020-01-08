@@ -35,7 +35,7 @@
 
 
 
-            <form action="Controlador_OfertaEducativa2" method="post">
+            <form action="OfertaEducativa" method="post">
 
                 <div class="btn-item coo" id="clic">
                     <%=Controlador.getVistaCatalogoPrograma()%>         

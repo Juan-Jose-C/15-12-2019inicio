@@ -6,6 +6,37 @@ import java.util.ArrayList;
 public class Controlador {
 
 //-------------------------------Pagina de Inicio------------------------------------------------------------------
+    public static String getVistaInicioBanner() throws SQLException {
+        String html = "";
+        Modelo_ConsultaInicio modeloIn = new Modelo_ConsultaInicio();
+        for (Modelo_ConsultaInicio In : modeloIn.getSelectConsultaAvis0sConcocatorias(1)) {
+            html += "<img src=\"Imagenes/" + In.getRuta_Imagen() + "\">";
+        }
+        return html;
+    }
+
+    public static String getVistaInicioConvocatorias() throws SQLException {
+        String html = "";
+        Modelo_ConsultaInicio modeloIn = new Modelo_ConsultaInicio();
+        for (Modelo_ConsultaInicio In2 : modeloIn.getSelectConsultaAvis0sConcocatorias(2)) {
+            html += "<div class=\"card\" >"
+                    + "<button id=\"imgproceso\" onclick=\"abrir(this.value)\" value=\"Url/" + In2.getRuta_Url() + "\"><img id=\"imgproceso2\" src=\"Imagenes/" + In2.getRuta_Imagen() + "\"></button>"
+                    + " </div>";
+        }
+        return html;
+    }
+
+    public static String getVistaInicioavisos() throws SQLException {
+        String html = "";
+        Modelo_ConsultaInicio modeloIn = new Modelo_ConsultaInicio();
+        for (Modelo_ConsultaInicio In3 : modeloIn.getSelectConsultaAvis0sConcocatorias(3)) {
+            html += "<div class=\"card\">\n"
+                    + "   <button id=\"imgproceso\" onclick=\"abrir(this.value)\" value=\"Url/" + In3.getRuta_Url() + "\"><img id=\"imgproceso2\" src=\"Imagenes/" + In3.getRuta_Imagen() + "\"></button>\n"
+                    + "                    </div>";
+        }
+
+        return html;
+    }
 //--------------------------------pagina de Directorio de la coordinacion------------------------------------------
     static int inc = 0;
     static ArrayList<Integer> IdArea = new ArrayList<>();
@@ -53,7 +84,7 @@ public class Controlador {
         String html = "";
         Modelo_ConsultaOfertaEducativa modeloEdu = new Modelo_ConsultaOfertaEducativa();
         for (Modelo_ConsultaOfertaEducativa edu : modeloEdu.getSelectConsultaCatalogoPrograma()) {
-            html +="<button name=\"nombre\" class=\"btn-ghost red secundary round\" value=\""+edu.getId_carrera()+"\">" + edu.getNombreCarrera() + "</button>  \n";
+            html += "<button name=\"nombre\" class=\"btn-ghost red secundary round\" value=\"" + edu.getId_carrera() + "\">" + edu.getNombreCarrera() + "</button>  \n";
         }
         return html;
     }
@@ -62,7 +93,7 @@ public class Controlador {
         String html = "";
         Modelo_ConsultaOfertaEducativa modeloOfe = new Modelo_ConsultaOfertaEducativa();
         for (Modelo_ConsultaOfertaEducativa edu : modeloOfe.getSelectConsultaOfertaEducativa(Oferta)) {
-            html += "<button onclick=\"abrir(this.value)\" value=\"Carreras/carrera/"+edu.getPdf_informacion()+".pdf\" class=\"btn-ghost red secundary round\">"+edu.getCarrera()+"</button>  \n";
+            html += "<button onclick=\"abrir(this.value)\" value=\"Carreras/carrera/" + edu.getPdf_informacion() + ".pdf\" class=\"btn-ghost red secundary round\">" + edu.getCarrera() + "</button>  \n";
         }
 
         return html;

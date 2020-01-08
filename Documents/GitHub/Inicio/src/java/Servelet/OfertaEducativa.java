@@ -21,7 +21,7 @@ import Codigo_Java.Controlador;
  *
  * @author JUAN
  */
-public class Controlador_OfertaEducativa2 extends HttpServlet {
+public class OfertaEducativa extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -60,7 +60,7 @@ public class Controlador_OfertaEducativa2 extends HttpServlet {
             out.println("</div>");
 
             out.println("<br><br><br><br>");
-            out.println(" <a href=\"Oferta Educativa.jsp\" class=\"btn-ghost red round\">Regresar</a>");
+            out.println("<center> <a href=\"Oferta Educativa.jsp\" class=\"btn-ghost red round\">Regresar</a></center>");
             out.println("</div>");
 
             out.println("<div class=\"overlay\" id=\"overlay\">\n"
@@ -79,7 +79,7 @@ public class Controlador_OfertaEducativa2 extends HttpServlet {
             out.println("</body>");
             out.println("</html>");
         } catch (SQLException ex) {
-            Logger.getLogger(Controlador_OfertaEducativa2.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(OfertaEducativa.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 

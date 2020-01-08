@@ -13,13 +13,13 @@ public class Consultas {
     //String Id_Avisos;
     //String Nombre_Avisos;
     //String Id_Tipo;
-    String Ruta_Imagen;
-    String Ruta_Url;
+    //String Ruta_Imagen;
+    //String Ruta_Url;
     //String Fecha_Inicio;
     //String Fecha_limite;
     //String Id_Lugar;
 
-    public Consultas() {
+    /*public Consultas() {
     }
 
     public Consultas(String Ruta_Imagen, String Ruta_Url) {
@@ -34,7 +34,7 @@ public class Consultas {
 
     public String getRuta_Url() {
         return this.Ruta_Url;
-    }
+    }*/
 
     public void cerrarconexion() {
         try {
