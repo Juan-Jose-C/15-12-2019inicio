@@ -1,0 +1,27 @@
+h2{
+	text-align: center;
+}
+#bloque1{
+	 background: white;
+	 width: 500px;
+	 height: 400px;
+	  margin: -10px 40px;
+	 text-align: justify;
+	 margin-bottom: 400px;
+	 margin-left: -10px;
+	 
+}
+#bloque2{
+	background: white;
+	width: 500px;
+	height: 400px;
+	margin: -800px 650px;
+	text-align: justify;
+	margin-bottom: 400px;
+	margin-right: 0px;
+	
+}
+#imagen{
+    
+  margin: -10px 280px;  
+}
